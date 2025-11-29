@@ -11,6 +11,11 @@ pipeline {
                 sh 'cat jenkins/Jenkinsfile'
             }
         }
+        stage('complete') {
+            steps {
+                echo 'Job Complete!'
+            }
+        }
         // stage('Build') {
         //     steps {
         //         sh 'mvn -B -DskipTests clean package'
