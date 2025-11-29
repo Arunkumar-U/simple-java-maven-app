@@ -16,6 +16,13 @@ pipeline {
                 echo 'Job Complete!'
             }
         }
+        stage('complete') {
+            steps {
+                echo 'Job Complete!' > touch.txt
+                ls
+                cat touch.txt
+            }
+        }
         // stage('Build') {
         //     steps {
         //         sh 'mvn -B -DskipTests clean package'
